@@ -1,0 +1,10 @@
+features of login page
+
+login page
+accept username and password
+store the user data in session
+redirect welcome page
+logout
+
+python -m venv venv
+venv\Scripts\activate
