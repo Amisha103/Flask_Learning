@@ -1,0 +1,23 @@
+JINJA 2
+
+1.python values
+{{ variable }}
+
+{{ name }}
+eg <h1>welcome {{ name }}</h1>// will show the value of this variable
+
+
+2 - conditionals
+{% if condition %} .... {% endif %}
+\\helps to show the content on the basis of a condition
+// for eg if person is less than 18 years then he is not eligible
+
+eg.
+{% if is_topper %}
+<p> you are a topper</p>
+{% else %}
+<p> You need to work hard</p>
+{% endif %}
+
+
+3.
