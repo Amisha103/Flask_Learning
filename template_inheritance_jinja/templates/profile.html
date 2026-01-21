@@ -2,17 +2,23 @@
 <head>
     <meta charset="UTF-8">
     
-    <title>Welcome page
-        
+    <title>
+        Student Profile
     </title>
 </head>
 <body>
-<h1> Hello {{name}}</h1>
+<h1>Hello {{ name }}</h1>
+{% if is_topper %}
+<h4>You are a Topper, Very Good</h4>
+{% else %}
+<h4>You Need to work hard</h4>
+{% endif %}
+<h3>Your enrolled subjects are as followings:</h3>
 <ul>
-<li> Maths</li>
-<li> Science</li>
-<li> History</li>
+{% for sub in subjects %}
+<li>{{ sub }}</li>
+{% endfor %}
 
-</ul> 
+</ul>
 </body>
 </html>
