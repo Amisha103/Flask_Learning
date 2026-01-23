@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     
     <title>
-        {% block title %}My feedback site{%  endblock %}
+        {% block title %}Flask-WTF Form{%  endblock %}
     </title>
     <style>
     body{
@@ -18,19 +18,19 @@
 </head>
 <body>
 <header>
-  <h1> Welcome to my site</h1>
+  <h1>Flask WTF Registration</h1>
   <nav>
     <a href="/"> Home</a>
   </nav>
 </header>
-{% with messages  = get_flashed_messages() %}
+{% with messages  = get_flashed_messages(with_categories=True) %}
 
 {% if messages %}
-<ul style="color:green;">
-    {% for msg in messages %}
-    <li>{{msg}}</li>
+
+    {% for category, msg in messages %}
+   <p style="color:green;"> {{msg}}</p>
     {% endfor %}
-</ul>
+
 {% endif %}
 {% endwith %}
 {% block content %} {% endblock %}
