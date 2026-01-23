@@ -18,13 +18,22 @@
 </head>
 <body>
 <header>
-  <h1> Feedback page</h1>
+  <h1> Welcome to my site</h1>
   <nav>
-    <a href="/feedback"> Feedback</a>
+    <a href="/"> Home</a>
   </nav>
 </header>
-{% block content %}
-{% endblock %}
+{% with messages  = get_flashed_messages() %}
+
+{% if messages %}
+<ul style="color:green;">
+    {% for msg in messages %}
+    <li>{{msg}}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+{% block content %} {% endblock %}
 <footer>
 <p>
     &copy:FEEDBACK SITE
